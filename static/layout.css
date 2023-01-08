@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+            'header header header header '
+            'menu main main main ';
+    grid-template-rows: auto 100vh;
+    grid-template-columns: 240px 1fr 1fr 1fr;
+}
+
+.grid-header {
+    z-index: 1250;
+    grid-area: header;
+}
+
+.grid-menu {
+    grid-area: menu;
+}
+
+.grid-main {
+    grid-area: main;
+    margin: 32px;
+}
+
+.main {
+    height: 100vh;
+}
