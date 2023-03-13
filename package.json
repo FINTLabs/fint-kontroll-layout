@@ -2,17 +2,58 @@
   "name": "fint-kontroll-layout",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/layout.ts",
+  "main": "dist/layout.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node layout.js"
+    "start": "parcel build && node dist/layout.js",
+    "watch": "parcel watch",
+    "build": "parcel build",
+    "test": "jest",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "clean": "rm -rf dist && rm -rf docs"
   },
-  "keywords": [],
+  "files": [
+    "dist",
+    "src",
+    "package.json",
+    "README.md"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@podium/layout": "^4.6.115",
-    "@podium/utils": "^4.4.38",
-    "express": "^4.18.2"
+    "@fintlabs/flais-podium-layout": "^1.0.0-rc-4"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.21.0",
+    "@parcel/packager-ts": "^2.8.3",
+    "@parcel/transformer-typescript-types": "^2.8.3",
+    "@types/node": "^18.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^5.5.0",
+    "constants-browserify": "^1.0.0",
+    "crypto-browserify": "^3.12.0",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "events": "^3.1.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.8.3",
+    "path-browserify": "^1.0.0",
+    "prettier": "^2.8.4",
+    "process": "^0.11.10",
+    "punycode": "^1.4.1",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.1.0",
+    "typescript": "^4.9.5",
+    "url": "^0.11.0",
+    "util": "^0.12.3"
   }
 }
