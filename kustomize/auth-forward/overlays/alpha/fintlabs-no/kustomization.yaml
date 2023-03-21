@@ -14,6 +14,16 @@ patches:
     target:
       kind: NamOAuthClientApplicationResource
       name: kontroll-auth-forward
+  - patch: |-
+      - op: replace
+        path: "/spec/template/spec/containers/0/env/1"
+        value: 
+          name: spring.webflux.base-path
+          value: /alpha/fintlabs-no
+    target:
+      kind: Deployment
+      name: kontroll-auth-forward
+
 commonLabels:
   app.kubernetes.io/name: flais-auth-forward-service
   app.kubernetes.io/instance: kontroll-auth-forward-fintlabs-no

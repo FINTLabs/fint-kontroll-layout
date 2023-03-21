@@ -27,3 +27,5 @@ spec:
           env:
             - name: logging.level.no.fintlabs
               value: debug
+            - name: spring.webflux.base-path
+              value: /dummy
