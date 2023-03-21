@@ -1,12 +1,11 @@
-name: CD
+name: CD Forwad Auth
 
-on: [push]
+on: [ push ]
 
 jobs:
   deploy-to-aks:
     name: deploy for ${{ matrix.org }} to ${{ matrix.cluster }}
     runs-on: ubuntu-latest
-    needs: build-and-push
     permissions:
       contents: read
       packages: write
@@ -18,8 +17,8 @@ jobs:
         cluster:
           - aks-alpha-fint-2021-11-18
           - aks-beta-fint-2021-11-23
-    #          - aks-api-fint-2022-02-08
-    #          - aks-pwf-fint-2021-10-20
+        #          - aks-api-fint-2022-02-08
+        #          - aks-pwf-fint-2021-10-20
         exclude:
           - org: viken-no
             cluster: aks-alpha-fint-2021-11-18
