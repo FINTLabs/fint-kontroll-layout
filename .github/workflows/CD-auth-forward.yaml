@@ -22,6 +22,8 @@ jobs:
         exclude:
           - org: viken-no
             cluster: aks-alpha-fint-2021-11-18
+          - org: fintlabs-no
+            cluster: aks-beta-fint-2021-11-23
 
     steps:
       - name: Checkout repository
