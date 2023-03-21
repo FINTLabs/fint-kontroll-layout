@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kontroll-auth-forward
+  labels:
+    app: kontroll-auth-forward
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`kontroll.vigoiks.no`) && PathPrefix(`/alpha/fintlabs-no/_oauth`)
+      kind: Rule
+      services:
+        - name: kontroll-auth-forward
+          port: 8080

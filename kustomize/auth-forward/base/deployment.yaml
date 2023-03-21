@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kontroll-auth-forward
+spec:
+  selector:
+    matchLabels:
+      app: kontroll-auth-forward
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: kontroll-auth-forward
+    spec:
+      terminationGracePeriodSeconds: 60
+      containers:
+        - image: ghcr.io/fintlabs/flais-auth-forward-service:sha-692c172
+          name: kontroll-auth-forward
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          envFrom:
+            - secretRef:
+                name: kontroll-auth-forward
+          env:
+            - name: logging.level.no.fintlabs
+              value: debug

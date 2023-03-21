@@ -1,0 +1,10 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: kontroll-auth-forward
+spec:
+  forwardAuth:
+    address: http://kontroll-auth-forward:8080/_oauth
+    authResponseHeaders:
+      - Authorization
+    trustForwardHeader: true

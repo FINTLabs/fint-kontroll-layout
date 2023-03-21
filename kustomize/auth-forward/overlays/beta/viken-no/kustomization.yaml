@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+patchesStrategicMerge:
+  - ingress-route.yaml
+resources:
+  - ../../../base
+namespace: viken-no
+patches:
+  - patch: |-
+      - op: replace
+        path: "/spec/redirectUris"
+        value: 
+          - https://kontroll.vigoiks.no/beta/viken-no/_oauth/callback
+    target:
+      kind: NamOAuthClientApplicationResource
+      name: kontroll-auth-forward
+commonLabels:
+  app.kubernetes.io/name: flais-auth-forward-service
+  app.kubernetes.io/instance: kontroll-auth-forward-viken-no
+  app.kubernetes.io/version: "sha-692c172"
+  app.kubernetes.io/managed-by: "ga"
+  app.kubernetes.io/component: authentication
+  app.kubernetes.io/part-of: fint-kontroll
+  fintlabs.no/team: bas
