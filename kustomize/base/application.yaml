@@ -1,0 +1,17 @@
+apiVersion: fintlabs.no/v1alpha1
+kind: Application
+metadata:
+  name: fint-kontroll-layout
+spec:
+  port: 3000
+  orgId: fintlabs.no
+  image: ghcr.io/fintlabs/fint-kontroll-layout
+  prometheus:
+    enabled: true
+    port: "3000"
+    path: /metrics
+  url:
+    hostname: kontroll.vigoiks.no
+    basePath: /alpha/fintlabs-no
+  ingress:
+    enabled: true
