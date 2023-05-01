@@ -1,7 +1,7 @@
 apiVersion: fintlabs.no/v1alpha1
 kind: Application
 metadata:
-  name: fint-kontroll-layout
+  name: fint-kontroll-layout-layout-config-service
 spec:
   orgId: fintlabs.no
   image: ghcr.io/fintlabs/flais-layout-config-service:latest
