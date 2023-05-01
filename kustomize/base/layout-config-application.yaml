@@ -5,7 +5,7 @@ metadata:
 spec:
   orgId: fintlabs.no
   image: ghcr.io/fintlabs/flais-layout-config-service:latest
-  imagePullPolicy: always
+  imagePullPolicy: Always
   url:
     hostname: kontroll.vigoiks.no
     basePath: /alpha/fintlabs-no/api/layout

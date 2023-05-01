@@ -10,5 +10,5 @@ commonLabels:
   app.kubernetes.io/managed-by: GA
   app.kubernetes.io/component: frontend
   app.kubernetes.io/part-of: fint-kontroll
-  fintlabs.no/team: base
+  fintlabs.no/team: bas
   fintlabs.no/org-id: fintlabs.no
