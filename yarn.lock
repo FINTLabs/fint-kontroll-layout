@@ -241,10 +241,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@fintlabs/flais-podium-layout@^1.0.0-rc-13":
-  version "1.0.0-rc-13"
-  resolved "https://registry.yarnpkg.com/@fintlabs/flais-podium-layout/-/flais-podium-layout-1.0.0-rc-13.tgz#9caa02ba54fa0dedccea38b5b9f6ad1defdc822e"
-  integrity sha512-6KAgQw+nKupHB52Nv5cJojn9+UZ/fs6eod1fFJXghs+38iiNNiQcKbglsGH+KF4FfUHPrkM+V6BUjhyEAHhNwQ==
+"@fintlabs/flais-podium-layout@^1.0.0-rc-14":
+  version "1.0.0-rc-14"
+  resolved "https://registry.yarnpkg.com/@fintlabs/flais-podium-layout/-/flais-podium-layout-1.0.0-rc-14.tgz#86549e4d6069de0e2a84b6dac794f47e6fb3447e"
+  integrity sha512-ehbymqZhZ0qQq6TcdwX2yAZEHqtd2q8ashKR1djDYovCdKacKj2HfhHk9wiydG+tLuwG/saYPpEJg47thNdz7A==
   dependencies:
     "@podium/client" "^4.5.30"
     "@podium/layout" "^4.6.117"

@@ -15,3 +15,6 @@ spec:
     basePath: /alpha/fintlabs-no
   ingress:
     enabled: true
+  env:
+    - name: LAYOUT_CONFIGURATION_URI
+      value: http://fint-kontroll-layout-layout-config-service:8080/alpha/fintlabs-no/api/layout/configuration
