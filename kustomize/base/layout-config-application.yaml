@@ -3,15 +3,13 @@ kind: Application
 metadata:
   name: fint-kontroll-layout
 spec:
-  port: 3000
   orgId: fintlabs.no
-  image: ghcr.io/fintlabs/fint-kontroll-layout:sha-3f69fbe
-  prometheus:
-    enabled: true
-    port: "3000"
-    path: /metrics
+  image: ghcr.io/fintlabs/flais-layout-config-service:latest
+  imagePullPolicy: always
   url:
     hostname: kontroll.vigoiks.no
-    basePath: /alpha/fintlabs-no
+    basePath: /alpha/fintlabs-no/api/layout
   ingress:
+    enabled: true
+  database:
     enabled: true

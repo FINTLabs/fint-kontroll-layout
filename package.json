@@ -11,7 +11,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@fintlabs/flais-podium-layout": "^1.0.0-rc-5"
+    "@fintlabs/flais-podium-layout": "^1.0.0-rc-13"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.21.5",
