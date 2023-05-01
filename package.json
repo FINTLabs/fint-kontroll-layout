@@ -1,24 +1,13 @@
 {
   "name": "fint-kontroll-layout",
   "version": "1.0.0",
-  "source": "src/layout.ts",
-  "main": "dist/layout.js",
+  "main": "layout.js",
   "scripts": {
-    "start": "parcel build && node dist/layout.js",
-    "watch": "parcel watch",
-    "build": "parcel build",
-    "clean": "rm -rf dist"
+    "start": "node layout.js"
   },
   "license": "MIT",
   "dependencies": {
     "@fintlabs/flais-podium-layout": "^1.0.0-rc-14"
   },
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.21.5",
-    "@parcel/packager-ts": "^2.8.3",
-    "@parcel/transformer-typescript-types": "^2.8.3",
-    "@types/node": "^18.16.3",
-    "parcel": "^2.8.3",
-    "typescript": "^5.0.4"
-  }
+  "devDependencies": {}
 }

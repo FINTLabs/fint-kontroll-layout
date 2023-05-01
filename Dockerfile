@@ -1,16 +1,8 @@
-FROM node:18 as builder
+FROM node:18-alpine
 
-COPY . /src
-WORKDIR /src
-RUN yarn install && yarn build
-CMD [ "node", "/src/dist/layout.js" ]
-
-
-#FROM node:18
-#WORKDIR /app
-#COPY --from=builder /src/dist/ /app/
-#COPY yarn.lock /app/
-#COPY package.json /app/
-#COPY pods.json /app/
-#RUN yarn install --production
-#CMD [ "node", "/app/layout.js" ]
+WORKDIR /usr/src/app
+COPY package.json ./
+COPY yarn.lock ./
+COPY layout.js ./
+RUN yarn install
+CMD [ "node", "/usr/src/app/layout.js" ]
