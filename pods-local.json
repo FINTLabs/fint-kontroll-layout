@@ -8,13 +8,15 @@
     },
     "menu": {
       "name": "fint-kontroll-menu-pod",
-      "uri": "http://localhost:7102/manifest.json"
+      "uri": "http://localhost:7101/manifest.json"
     },
     "main": [
       {
-        "name": "fint-kontroll-groups-pod",
-        "uri": "http://localhost:7103/manifest.json",
-        "path": "/alpha/fintlabs-no"
+        "name": "fint-kontroll-role-pod",
+        "uri": "http://localhost:7102/manifest.json",
+        "path": "/alpha/fintlabs-no",
+        "title": "Grupper",
+        "icon": "groups_icon"
       }
     ]
   }
