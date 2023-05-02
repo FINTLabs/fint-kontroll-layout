@@ -2,6 +2,10 @@ apiVersion: fintlabs.no/v1alpha1
 kind: Application
 metadata:
   name: fint-kontroll-layout
+  labels:
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/name: fint-kontroll-layout
+    app.kubernetes.io/instance: fint-kontroll-layout_fintlabs-no
 spec:
   port: 3000
   orgId: fintlabs.no
@@ -17,4 +21,4 @@ spec:
     enabled: true
   env:
     - name: LAYOUT_CONFIGURATION_URI
-      value: http://fint-kontroll-layout-layout-config-service:8080/alpha/fintlabs-no/api/layout/configuration
+      value: http://fint-kontroll-layout-config-service:8080/alpha/fintlabs-no/api/layout/configuration

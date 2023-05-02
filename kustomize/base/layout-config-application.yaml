@@ -1,7 +1,11 @@
 apiVersion: fintlabs.no/v1alpha1
 kind: Application
 metadata:
-  name: fint-kontroll-layout-layout-config-service
+  name: fint-kontroll-layout-config-service
+  labels:
+    app.kubernetes.io/component: config
+    app.kubernetes.io/name: fint-kontroll-layout-config-service
+    app.kubernetes.io/instance: fint-kontroll-layout-config-service_fintlabs-no
 spec:
   orgId: fintlabs.no
   image: ghcr.io/fintlabs/flais-layout-config-service:latest
