@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - application.yaml
   - layout-config-application.yaml
+  - flais-sso.yaml
 commonLabels:
   app.kubernetes.io/version: "latest"
   app.kubernetes.io/managed-by: GA
