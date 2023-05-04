@@ -6,21 +6,21 @@ patches:
   - patch: |-
       - op: replace
         path: "/spec/basePath"
-        value: /alpha/fintlabs-no
+        value: /beta/fintlabs-no
     target:
       kind: FLAISSso
       name: fint-kontroll-sso
   - patch: |-
       - op: replace
         path: "/spec/url/basePath"
-        value: /alpha/fintlabs-no
+        value: /beta/fintlabs-no
     target:
       kind: Application
       name: fint-kontroll-layout
   - patch: |-
       - op: replace
         path: "/spec/url/basePath"
-        value: /alpha/fintlabs-no
+        value: /beta/fintlabs-no
     target:
       kind: Application
       name: fint-kontroll-layout-config-service
@@ -29,7 +29,8 @@ patches:
         path: "/spec/env/-"
         value:
           name: LAYOUT_CONFIGURATION_URI
-          value: http://fint-kontroll-layout-config-service:8080/alpha/fintlabs-no/api/layout/configuration
+          value: http://fint-kontroll-layout-config-service:8080/beta/fintlabs-no/api/layout/configuration
     target:
       kind: Application
       name: fint-kontroll-layout
+
