@@ -20,7 +20,7 @@ patches:
   - patch: |-
       - op: replace
         path: "/spec/url/basePath"
-        value: /beta/fintlabs-no
+        value: /beta/fintlabs-no/api/layout
     target:
       kind: Application
       name: fint-kontroll-layout-config-service
