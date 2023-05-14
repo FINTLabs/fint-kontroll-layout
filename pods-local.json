@@ -1,6 +1,6 @@
 {
   "name": "example",
-  "basePath": "/alpha/fintlabs-no",
+  "basePath": "/",
   "appBarMenuMainLayout": {
     "appbar": {
       "name": "fint-kontroll-appbar-pod",
@@ -12,11 +12,11 @@
     },
     "main": [
       {
-        "name": "fint-kontroll-role-pod",
+        "name": "fint-kontroll-user-pod",
         "uri": "http://localhost:7102/manifest.json",
-        "path": "/alpha/fintlabs-no",
-        "title": "Grupper",
-        "icon": "groups_icon"
+        "path": "/",
+        "title": "Brukere",
+        "icon": "person"
       }
     ]
   }

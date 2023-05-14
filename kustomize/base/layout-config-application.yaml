@@ -16,4 +16,5 @@ spec:
   ingress:
     enabled: true
   database:
-    enabled: true
+    #enabled: true
+    database: fint-kontroll
