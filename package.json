@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@fintlabs/flais-podium-layout": "1.0.1-rc-3"
+    "@fintlabs/flais-podium-layout": "1.0.1-rc-4"
   },
   "devDependencies": {}
 }
