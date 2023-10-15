@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@fintlabs/flais-podium-layout@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@fintlabs/flais-podium-layout/-/flais-podium-layout-1.0.0.tgz#e63b7342e1e8be634022ea8643136445df96b48a"
-  integrity sha512-fhnhzLj+LNoHM3tvROQdSZLxih5Wpzp5XirHprBPW2pfoFsNuYDxBcIXcLzCjrP/JhAnjtkLgaY9JA0N2kl/9g==
+"@fintlabs/flais-podium-layout@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@fintlabs/flais-podium-layout/-/flais-podium-layout-1.0.1.tgz#b3ab7fb95048c851338e66cf86e5cc1f22375098"
+  integrity sha512-w3I+4R5WJjjh0OrzO/+OBH7Ue5fP3OiOty1htUkew+ilUz0jkPsS80U7zka8XiwL86Sk92AAKH0AJc/wVe2P6g==
   dependencies:
     "@podium/client" "^4.5.30"
     "@podium/layout" "^4.6.117"
