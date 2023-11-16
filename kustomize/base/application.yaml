@@ -10,6 +10,7 @@ spec:
   port: 3000
   orgId: fintlabs.no
   image: ghcr.io/fintlabs/fint-kontroll-layout:sha-f599119
+  #image: ghcr.io/fintlabs/fint-kontroll-layout:latest
   prometheus:
     enabled: true
     port: "3000"

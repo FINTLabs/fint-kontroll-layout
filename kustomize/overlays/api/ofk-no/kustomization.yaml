@@ -14,17 +14,20 @@ patches:
   - patch: |-
       - op: replace
         path: "/spec/basePath"
-        value: /ofk-no
+        value: "/ofk-no"
     target:
       kind: FLAISSso
       name: fint-kontroll-sso
   - patch: |-
       - op: replace
         path: "/spec/url/basePath"
-        value: /ofk-no
+        value: "/ofk-no"
       - op: replace
         path: "/spec/orgId"
         value: "ofk.no"
+      - op: replace
+        path: "/spec/image"
+        value: "ghcr.io/fintlabs/fint-kontroll-layout:latest"
     target:
       kind: Application
       name: fint-kontroll-layout
