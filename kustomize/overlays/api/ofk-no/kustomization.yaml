@@ -32,6 +32,9 @@ patches:
       - op: replace
         path: "/spec/url/basePath"
         value: /ofk-no/api/layout
+      - op: replace
+        path: "/spec/orgId"
+        value: "ofk.no"
     target:
       kind: Application
       name: fint-kontroll-layout-config-service
