@@ -1,0 +1,47 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+commonLabels:
+  app.kubernetes.io/name: fint-kontroll-layout
+  app.kubernetes.io/instance: fint-kontroll-layout_ofk_no
+  app.kubernetes.io/version: latest
+  app.kubernetes.io/component: frontend
+  app.kubernetes.io/part-of: fint-kontroll
+  fintlabs.no/team: bas
+  fintlabs.no/org-id: ofk.no
+patches:
+  - patch: |-
+      - op: replace
+        path: "/spec/basePath"
+        value: /ofk-no
+    target:
+      kind: FLAISSso
+      name: fint-kontroll-sso
+  - patch: |-
+      - op: replace
+        path: "/spec/url/basePath"
+        value: /ofk-no
+      - op: replace
+        path: "/spec/orgId"
+        value: "ofk.no"
+    target:
+      kind: Application
+      name: fint-kontroll-layout
+  - patch: |-
+      - op: replace
+        path: "/spec/url/basePath"
+        value: /ofk-no/api/layout
+    target:
+      kind: Application
+      name: fint-kontroll-layout-config-service
+  - patch: |-
+      - op: add
+        path: "/spec/env/-"
+        value:
+          name: LAYOUT_CONFIGURATION_URI
+          value: http://fint-kontroll-layout-config-service:8080/ofk-no/api/layout/configuration
+    target:
+      kind: Application
+      name: fint-kontroll-layout
+
